@@ -1,0 +1,139 @@
+body {
+    background-color: #FFF9F3;
+}
+.add-to-cart-btn {
+    background-color: #FF7F50;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+.add-to-cart-btn:hover {
+    background-color: #FF6347;
+}
+.confirm-order-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+.confirm-order-btn:hover {
+    background-color: #45a049;
+}
+
+.quantity-selector {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.product-card:hover .quantity-selector {
+    display: flex;
+    align-items: center;
+}
+.quantity-selector button {
+    background-color: #f87171;
+    color: white;
+    border: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+}
+.quantity-selector span {
+    margin: 0 10px;
+}
+/* Styling for modal popup */
+#orderConfirmationModal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styling for the checkmark icon */
+.material-icons.text-green-500 {
+    color: #28A745;
+    font-size: 6rem;
+}
+
+/* Styling for the order confirmation message */
+h2.text-3xl.font-bold.text-center {
+    color: #2D2D2D;
+    font-size: 2rem;
+}
+
+p.text-lg.text-center {
+    color: #6C757D;
+    font-size: 1.125rem;
+}
+
+/* Styling for the total price */
+div.text-center.font-bold.text-xl {
+    color: #2D2D2D;
+    font-size: 1.25rem;
+}
+
+/* Styling for the button */
+.confirm-order-btn {
+    background-color: #FF6F4E;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1.125rem;
+    text-align: center;
+    width: 100%;
+}
+
+.confirm-order-btn:hover {
+    background-color: #E66440;
+}
+
+#orderConfirmationModal {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#orderConfirmationModal.show {
+    opacity: 1;
+    visibility: visible;
+}
+aside {
+    position: sticky;
+    top: 20px; 
+   
+}
+
+/* Untuk desktop */
+@media (min-width: 1024px) {
+    aside {
+        position: sticky;
+        top: 20px; /* Jarak dari atas halaman ketika sticky dimulai */
+        width: 300px; /* Lebar tetap */
+    }
+}
+
+/* Untuk mobile */
+@media (max-width: 1023px) {
+    aside {
+        position: static; /* Posisi normal untuk mobile */
+        width: 100%; /* Lebar penuh */
+        margin-top: 20px; /* Memberikan jarak dari elemen di atasnya */
+    }
+}
+
+
+
